@@ -11,6 +11,7 @@ typedef struct float4
 	float x, y, z, w;
 } float4, f4;
 
+float4 f4new(float x, float y, float z, float w);
 float4 f4add(float4 a, float4 b);
 float4 f4sub(float4 a, float4 b);
 float4 f4mul(float4 a, float x);
@@ -28,6 +29,7 @@ typedef struct float3
 	float x, y, z;
 } float3, f3;
 
+float3 f3new(float x, float y, float z);
 float3 f3add(float3 a, float3 b);
 float3 f3sub(float3 a, float3 b);
 float3 f3mul(float3 a, float x);
@@ -46,6 +48,7 @@ typedef struct float2
 	float x, y;
 } float2, f2;
 
+float2 f2new(float x, float y);
 float2 f2add(float2 a, float2 b);
 float2 f2sub(float2 a, float2 b);
 float2 f2mul(float2 a, float x);
@@ -64,6 +67,7 @@ typedef struct int4
 	int x, y, z, w;
 } int4, i4;
 
+int4 i4new(int x, int y, int z, int w);
 int4 i4add(int4 a, int4 b);
 int4 i4sub(int4 a, int4 b);
 int4 i4mul(int4 a, int x);
@@ -81,6 +85,7 @@ typedef struct int3
 	int x, y, z;
 } int3, i3;
 
+int3 i3new(int x, int y, int z);
 int3 i3add(int3 a, int3 b);
 int3 i3sub(int3 a, int3 b);
 int3 i3mul(int3 a, int x);
@@ -99,6 +104,7 @@ typedef struct int2
 	int x, y;
 } int2, i2;
 
+int2 i2new(int x, int y);
 int2 i2add(int2 a, int2 b);
 int2 i2sub(int2 a, int2 b);
 int2 i2mul(int2 a, int x);

@@ -4,8 +4,8 @@
 
 int main() 
 {
-	float2 a = { .x = 1, .y = 2 };
-	float2 b = { .x = -1, .y = 1 };
+	float2 a = f2new(1, 2);
+	float2 b = f2new(-1, 1);
 	float2 c = f2add(a, b);
 	c = f2add(c, b);
 

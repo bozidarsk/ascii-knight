@@ -5,6 +5,12 @@
 
 ///////////////////////////////////////////////////////////////////////
 
+float4 f4new(float x, float y, float z, float w) 
+{
+	float4 a = { .x = x, .y = y, .z = z, .w = w };
+	return a;
+}
+
 float4 f4mul(float4 a, float x) 
 {
 	float4 c = { .x = a.x * x, .y = a.y * x, .z = a.z * x, .w = a.w * x };
@@ -45,6 +51,12 @@ int f4eq(float4 a, float4 b) { return feq(a.x, b.x) && feq(a.y, b.y) && feq(a.z,
 float f4dot(float4 a, float4 b) { return a.x*b.x + a.y*b.y + a.z*b.z + a.w*b.w; }
 
 ///////////////////////////////////////////////////////////////////////
+
+float3 f3new(float x, float y, float z) 
+{
+	float3 a = { .x = x, .y = y, .z = z };
+	return a;
+}
 
 float3 f3mul(float3 a, float x) 
 {
@@ -92,6 +104,12 @@ float3 f3cross(float3 a, float3 b)
 }
 
 ///////////////////////////////////////////////////////////////////////
+
+float2 f2new(float x, float y) 
+{
+	float2 a = { .x = x, .y = y };
+	return a;
+}
 
 float2 f2mul(float2 a, float x) 
 {
@@ -141,6 +159,12 @@ float3 f2cross(float2 a, float2 b)
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 
+int4 i4new(int x, int y, int z, int w) 
+{
+	int4 a = { .x = x, .y = y, .z = z, .w = w };
+	return a;
+}
+
 int4 i4mul(int4 a, int x) 
 {
 	int4 c = { .x = a.x * x, .y = a.y * x, .z = a.z * x, .w = a.w * x };
@@ -181,6 +205,12 @@ int i4eq(int4 a, int4 b) { return (a.x == b.x) && (a.y == b.y) && (a.z == b.z) &
 int i4dot(int4 a, int4 b) { return a.x*b.x + a.y*b.y + a.z*b.z + a.w*b.w; }
 
 ///////////////////////////////////////////////////////////////////////
+
+int3 i3new(int x, int y, int z) 
+{
+	int3 a = { .x = x, .y = y, .z = z };
+	return a;
+}
 
 int3 i3mul(int3 a, int x) 
 {
@@ -228,6 +258,12 @@ int3 i3cross(int3 a, int3 b)
 }
 
 ///////////////////////////////////////////////////////////////////////
+
+int2 i2new(int x, int y) 
+{
+	int2 a = { .x = x, .y = y };
+	return a;
+}
 
 int2 i2mul(int2 a, int x) 
 {
