@@ -82,4 +82,4 @@ void setbgcolor(uint32_t color) { printf("\x1b[48;2;%u;%u;%um", (color >> 0) & 0
 // abgr
 void setfgcolor(uint32_t color) { printf("\x1b[38;2;%u;%u;%um", (color >> 0) & 0xff, (color >> 8) & 0xff, (color >> 16) & 0xff); }
 
-void clear() { printf("\x1b[2J\x1b[H"); }
+void clear() { printf("\x1b[H\x1b[2J\x1b[3J"); }
