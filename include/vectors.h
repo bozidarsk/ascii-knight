@@ -1,11 +1,6 @@
 #ifndef VECTORS_H
 #define VECTORS_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-
 typedef struct float4 
 {
 	float x, y, z, w;
@@ -118,9 +113,5 @@ int i2eq(int2 a, int2 b);
 int i2dot(int2 a, int2 b);
 int3 i2cross(int2 a, int2 b);
 
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif

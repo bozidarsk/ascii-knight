@@ -1,4 +1,4 @@
-#include <iostream>
+#include <stdio.h>
 
 #include "vectors.h"
 
@@ -10,4 +10,6 @@ int main()
 	c = f2add(c, b);
 
 	printf("x=%f y=%f\n", c.x, c.y);
+
+	return 0;
 }
