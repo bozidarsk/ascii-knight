@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include <assert.h>
 #include <string.h>
+#include <time.h>
 
 #include "vectors.h"
 #include "console.h"
@@ -154,16 +155,22 @@ void map_generate(map *map)
 
 int run(const map *map) 
 {
+	struct timespec tprev, tcurr;
+
 	for (;;) 
 	{
+		timespec_get(&tcurr, TIME_UTC);
+		double dt = (double)(tcurr.tv_sec - tprev.tv_sec) + (double)(tcurr.tv_nsec - tprev.tv_nsec)*1e-9;
+
 		switch (input()) 
 		{
 			case 27:
 				return 0;
 		}
 
-		map_render(map);
+		// map_render(map);
 		wait(100);
+		tprev = tcurr;
 	}
 
 	return 0;
