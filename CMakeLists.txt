@@ -7,10 +7,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
 
 set(CMAKE_C_STANDARD 23)
 
-set(SOURCES
-	"${PROJECT_SOURCE_DIR}/src/vectors.c"
-	"${PROJECT_SOURCE_DIR}/src/mathf.c"
-)
+aux_source_directory(${PROJECT_SOURCE_DIR}/src SOURCES)
 
 add_executable(${PROJECT_NAME} "${PROJECT_SOURCE_DIR}/src/main.c")
 target_include_directories(${PROJECT_NAME} PRIVATE "${PROJECT_SOURCE_DIR}/include")
