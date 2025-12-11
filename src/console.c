@@ -76,6 +76,8 @@ int2 consolesize()
 void hidecursor() { printf("\x1b[?25l"); }
 void showcursor() { printf("\x1b[?25h"); }
 
+void movecursor(int2 position) { printf("\x1b[%u;%uH\x1b[%u;%uf", position.y, position.x, position.y, position.x); }
+
 // abgr
 void setbgcolor(uint32_t color) { printf("\x1b[48;2;%u;%u;%um", (color >> 0) & 0xff, (color >> 8) & 0xff, (color >> 16) & 0xff); }
 
